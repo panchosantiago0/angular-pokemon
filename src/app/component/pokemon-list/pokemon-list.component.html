@@ -1,0 +1,66 @@
+<div class="header">
+  <div class="logo-container">
+    <img (click)="reloadPage()" src="assets/img/logo.png" alt="Logo de la Pokedex">
+    
+  </div>
+  <div class="button-container">
+    <button class="search-button" routerLink="/battle">Ir a la Batalla de Pokémon</button>
+  </div>
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar por nombre o ID" class="search-input">
+    <button (click)="searchPokemon()" class="search-button">Buscar</button>
+  </div>
+
+</div>
+
+<div class="pokedex-container">
+  <!-- Contenedor para la lista de pokémones -->
+  <div class="pokemon-card">
+    <div class="pokemon-item" *ngFor="let pokemon of pokemons">
+      <br>
+      <div class="card">
+        <div class="card-img">
+          <img class="pokemon-image" *ngIf="pokemon.image" [src]="pokemon.image" alt="Imagen del Pokémon">
+          <span>{{ pokemon.id }}</span>
+        </div>
+        <div class="card-text">
+          <p class="card-name">{{ pokemon.name }}</p>
+          <p [ngClass]="getPokemonTypeClass(pokemon.type)">{{ pokemon.type }}</p>
+          <p>Ataque: {{ pokemon.attack }}</p>
+          <p>Defensa: {{ pokemon.defense }}</p>
+          <button (click)="editPokemon(pokemon)">Editar</button>
+          <!-- Formulario de edición (mostrar solo si se está editando este pokémon) -->
+          <form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()" *ngIf="editingPokemon === pokemon">
+            <br>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" formControlName="name" required>
+            <br>
+            <label for="type">Especie:</label>
+            <select id="type" formControlName="type" required>
+              <option value="Agua">Agua</option>
+              <option value="Eléctrico">Eléctrico</option>
+              <option value="Fuego">Fuego</option>
+              <option value="Acero">Acero</option>
+              <option value="Normal">Normal</option>
+            </select>
+            <br>
+            <label for="attack">Ataque:</label>
+            <input type="number" id="attack" formControlName="attack" required>
+            <br>
+            <label for="defense">Defensa:</label>
+            <input type="number" id="defense" formControlName="defense" required>
+            <br>
+            <label for="image">Imagen (opcional):</label>
+            <br>
+            <input type="text" id="image" formControlName="image">
+            <br>
+            <button type="submit">{{ editingPokemon ? 'Guardar' : 'Crear Pokémon' }}</button>
+            <br>
+            <button type="button" (click)="resetForm()">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,232 @@
+/* Estilos para cada tarjeta de pokémon */
+
+.card {
+  margin-bottom: 3%;
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  border-radius: 35px; 
+  transition: transform 0.2s;
+  
+}
+.card:hover {
+  transform: scale(1.05); 
+}
+.card .card-img {
+  background: #cdcdcd;
+  text-align: center;
+  min-height: 130px;
+  position: relative;
+  border-radius: 15px;
+}
+
+.card .card-img span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #b1b1b1;
+  padding: 4px;
+  min-width: 50px;
+  font-size: 0.8rem;
+}
+
+.card .card-img span:before {
+  content: "ID/";
+}
+
+.card .card-text {
+  background: rgb(177, 172, 172);
+  padding: 1rem;
+  min-height: 150px;
+  border-radius: 15px;
+}
+
+.card .card-text:hover {
+  cursor: pointer;
+}
+
+.card .card-text:hover .card-name {
+  color: red;
+}
+
+.card .card-text .card-name {
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px; 
+  font-weight: bold;
+  color: #333; 
+}
+
+.card .card-text .evolution-info {
+  margin-top: 10px;
+  border-left: 3px solid black;
+  padding-left: 10px;
+}
+
+.card .card-text .evolution-info .pokemon-base {
+  text-transform: capitalize;
+}
+
+/* Estilo de la imagen del Pokémon */
+.pokemon-image {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid #ff003f; 
+  margin-bottom: 10px;
+}
+/* Estilos para el tipo de Pokémon "Acero" */
+.type-steel {
+  background-color: brown; 
+  color: #fff; 
+  
+}
+
+/* Estilos para el tipo de Pokémon "Eléctrico" */
+.type-electric {
+  background-color: yellow; 
+  color: #fff; 
+}
+
+/* Estilos para el tipo de Pokémon "Agua" */
+.type-water {
+  background-color: blue; 
+  color: #fff; 
+  
+}
+
+/* Estilos para el tipo de Pokémon "Fuego" */
+.type-fire {
+  background-color: red; 
+  color: #fff; 
+}
+
+/* Estilos para el tipo de Pokémon "Normal" */
+.type-normal {
+  background-color: green; 
+  color: #fff;
+}
+
+
+button {
+  background-color: #ff003f; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e60039; 
+}
+
+/* Estilos para el contenedor de la lista de pokémones */
+.pokemon-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pokemon-item {
+  border-radius: 5px; 
+  transition: transform 0.2s;
+}
+
+.card-wrapper.one-card .card {
+  flex-grow: 1;
+}
+
+.visible {
+  display: block;
+}
+
+.card-wrapper .card:nth-of-type(1) {
+  animation-delay: 0.3333333333s;
+}
+
+.card-wrapper .card:nth-of-type(2) {
+  animation-delay: 0.3666666667s;
+}
+
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5e2020; 
+  padding: 10px;
+  justify-content: space-between;
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  flex-grow: 1;
+}
+
+/* Estilos para el logo */
+.logo-container img {
+  max-width: 250px; 
+  height: auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%; 
+  margin-right: 20px; 
+}
+
+.search-input {
+  flex-grow: 1; 
+  height: 35px; 
+  font-size: 16px; 
+  padding: 8px; 
+  max-width: 300px; 
+  margin-right: 5px; 
+}
+
+/* Estilos para el botón del buscador */
+.search-button {
+  height: 35px; 
+  font-size: 16px; 
+  padding: 8px 20px; 
+}
+
+.pokedex-container {
+  margin-bottom: 3%;
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  background: #5e2020;
+  border: 4px solid #ff0404;
+  border-radius: 5px;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: fade-in 0.5s ease-in-out;
+  border-radius: 15px; 
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.button-container button {
+  margin: 0 auto;
+}
+.header .button-container {
+  width: 100%;
+  justify-content: center;
+}

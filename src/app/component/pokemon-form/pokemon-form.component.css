@@ -1,0 +1,68 @@
+.pokedex-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.pokedex-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.pokedex-form input,
+.pokedex-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pokedex-form button {
+  background-color: #ff003f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 40px;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin-left: 5px;
+}
+
+.pokedex-form button:hover {
+  background-color: #e60039;
+}
+.pokedex-form.visible {
+  display: block;
+}
+/* Estilos para el botón "Agregar Pokémon" */
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-pokemon-btn {
+  background-color: #ff003f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 40px;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin-left: 5px;
+}
+
+.add-pokemon-btn:hover {
+  background-color: #e60039; /* Color rojo al pasar el mouse */
+}

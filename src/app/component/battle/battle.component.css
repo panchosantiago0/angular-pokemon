@@ -1,0 +1,102 @@
+.battle-container {
+    background-color: #f0f0f0; 
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  /* Estilos para los select */
+  .pokemon-selection {
+    background-color: #fff; 
+    border: 2px solid #666; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-right: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #f44336; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+  }
+  
+  /* Estilos para el botón al pasar el ratón */
+  button:hover {
+    background-color: #c62828; /* Color de fondo al pasar el ratón */
+  }
+  
+  .result {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar verticalmente el contenido */
+  }
+  div {
+    position: relative;
+  }
+  
+  .cartel1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.7); /* Color del fondo del cartel (rojo semitransparente) */
+    color: white; /* Color del texto del cartel */
+    padding: 10px; /* Espacio interno del cartel */
+    font-size: 24px; /* Tamaño de fuente del cartel */
+  }
+  .cartel2 {
+    position: absolute;
+    top: 0;
+    right: 0; /* Alinea el cartel a la derecha */
+    background-color: rgba(0, 17, 255, 0.7); /* Color del fondo del cartel (azul semitransparente) */
+    color: white; /* Color del texto del cartel */
+    padding: 10px; /* Espacio interno del cartel */
+    font-size: 24px; /* Tamaño de fuente del cartel */
+  }
+  .cartel3 {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background-color: #ffcc00; /* Color de fondo del cartel */
+    color: #fff; /* Color del texto del cartel */
+    font-size: 24px; /* Tamaño de fuente del cartel */
+    border: 5px solid #f00; /* Borde del cartel */
+    border-radius: 10px; /* Bordes redondeados del cartel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra del cartel */
+  }
+  
+  /* Estilos adicionales para el texto dentro del cartel */
+  .cartel3 p {
+    margin: 0; /* Elimina el margen predeterminado */
+  }
+  

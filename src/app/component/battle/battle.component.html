@@ -1,0 +1,37 @@
+<div class="battle-container">
+    <h2>Batalla de Pokémons</h2>
+    <div class="pokemon-selection">
+      <label for="pokemonA">Pokémon A:</label>
+      <select id="pokemonA" [(ngModel)]="pokemonA">
+        <option value="">Selecciona un Pokémon</option>
+        <option *ngFor="let pokemon of pokemons" [ngValue]="{name: pokemon.name, type: pokemon.type, attack: pokemon.attack, image: pokemon.image }">{{ pokemon.name }}</option>
+      </select>
+    </div>
+    <div class="pokemon-selection">
+      <label for="pokemonB">Pokémon B:</label>
+      <select id="pokemonB" [(ngModel)]="pokemonB">
+        <option value="">Selecciona un Pokémon</option>
+        <option *ngFor="let pokemon of pokemons" [ngValue]="{name: pokemon.name, type: pokemon.type, defense: pokemon.defense, image: pokemon.image }">{{ pokemon.name }}</option>
+      </select>
+    </div>
+    <button (click)="calculateDamage()">Calcular daño</button>
+    <a routerLink="/">Ir a la página principal</a>
+  </div>
+  <div class="container" *ngIf="calculated">
+    <div>
+        <div class="cartel1" *ngIf="mostrarImagen">Atacante</div>
+        <img [src]="imagenPokemonA()" *ngIf="mostrarImagen">    
+    </div>
+    <div class="cartel3">
+        <p *ngIf="result">{{ result }}</p>
+        <p *ngIf="damage !== 0">Daño: {{ damage }}</p>
+      </div>
+      
+    <div>
+        <div class="cartel2" *ngIf="mostrarImagen">Defensor</div>
+        <img [src]="imagenPokemonB()" *ngIf="mostrarImagen">
+      
+    </div>
+  </div>
+
+  

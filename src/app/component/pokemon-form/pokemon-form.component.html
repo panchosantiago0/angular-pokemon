@@ -1,0 +1,38 @@
+<div class="center">
+  <button class="add-pokemon-btn" (click)="toggleForm()">Agregar Pokémon</button>
+</div>
+<div class="pokedex-form" [ngClass]="{'visible': showForm}">
+  <form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
+   
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" formControlName="name" required>
+
+    
+    <label for="type">Especie:</label>
+    <select id="type" formControlName="type" required>
+      <option value="Agua">Agua</option>
+      <option value="Eléctrico">Eléctrico</option>
+      <option value="Fuego">Fuego</option>
+      <option value="Acero">Acero</option>
+      <option value="Normal">Normal</option>
+    </select>
+
+    
+    <label for="attack">Ataque:</label>
+    <input type="number" id="attack" formControlName="attack" required>
+
+    
+    <label for="defense">Defensa:</label>
+    <input type="number" id="defense" formControlName="defense" required>
+
+   
+    <label for="image">Imagen (URL):</label>
+    <input type="text" id="image" formControlName="image">
+
+    
+    
+    <!-- Botón "Guardar" para guardar los cambios o "Crear Pokémon" si no está en modo edición -->
+    <button type="submit"(click)="reloadPage()">{{ editingPokemon ? 'Guardar' : 'Crear Pokémon' }}</button>
+
+  </form>
+</div>

@@ -1,0 +1,17 @@
+
+<div *ngIf="pokemon" class="pokemon-detail">
+    <h2>{{ pokemon.name }}</h2>
+    <p class="pokemon-id">#{{ pokemon.id.toString().padStart(3, '0') }}</p>
+    <div class="pokemon-info">
+      <div class="pokemon-tipos">
+        <p class="tipo">{{ pokemon.type }}</p>
+      </div>
+      <div class="pokemon-stats">
+        <p class="stat">{{ pokemon.attack }}</p>
+        <p class="stat">{{ pokemon.defense }}</p>
+      </div>
+      <img [src]="pokemon.image" alt="{{ pokemon.name }}" />
+    </div>
+    <button [routerLink]="['/pokemons']">Volver a la lista</button>
+  </div>
+  
